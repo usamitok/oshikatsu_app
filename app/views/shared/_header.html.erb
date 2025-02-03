@@ -1,8 +1,10 @@
 <header>
-  <h1 class="title">推し活日記</h1>
+  <h1 class="title"><a href="/">推し活日記</a></h1>
   <nav class="nav">
     <ul class="menu-group">
-      <li class="menu-item"><a href="#">新規登録</a></li>
+      <li class="menu-item"><a href="">友達リスト</a></li>
+      <li class="menu-item"><a href="">プロフィール帳</a></li>
+      <%= link_to 'ログアウト', logout_path, class: 'dropdown-item', data: { turbo_method: :delete } %>
     </ul>
   </nav>
 </header>
