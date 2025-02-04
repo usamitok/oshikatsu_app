@@ -17,6 +17,10 @@ class DiariesController < ApplicationController
     end
   end
 
+  def show
+    @diary = Diary.find(params[:id])
+  end
+
   private
 
   def diary_params

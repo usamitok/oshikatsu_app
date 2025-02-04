@@ -55,6 +55,10 @@ header {
     padding: 10px;
   }
 
+body {
+    padding-bottom: 100px; /* フッターの高さと同じにする */
+}
+
 footer {
     position: fixed;
     bottom: 0;

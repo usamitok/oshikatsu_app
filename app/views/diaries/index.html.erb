@@ -9,20 +9,20 @@
                 <div class="card">
                     <div class="d-flex">
                       <h4 class="card-title">
-                        <%= link_to diary.title, '#' %>
+                        <%= link_to diary.title, diary_path(diary) %>
                       </h4>
-                      <div class='ms-auto'>
-                        <%= link_to '#', id: 'button-edit-#{diary.id}' do %>
-                          <i class="bi bi-pencil-fill"></i>
+                      <ul class="list-inline">
+                      <li><i class="bi bi-calendar"></i><%= l diary.created_at, format: :long %></li>
+                      </ul>
+                      <div class='ms-auto flex space-x-2'>
+                        <%= link_to '#', id: "button-edit-#{diary.id}", class: 'bg-blue-500 text-white p-2 rounded hover:bg-blue-600' do %>
+                          <i class="bi bi-pencil-fill"></i>編集
                         <% end %>
-                        <%= link_to '#', id: 'button-delete-#{diary.id}', method: :delete, data: {confirm: ''} do %>
-                          <i class="bi bi-trash-fill"></i>
+                        <%= link_to '#', id: "button-delete-#{diary.id}", method: :delete, data: {confirm: ''}, class: 'bg-red-500 text-white p-2 rounded hover:bg-red-600' do %>
+                          <i class="bi bi-trash-fill"></i>削除
                         <% end %>
                       </div>
                     </div>
-                    <ul class="list-inline">
-                      <li><i class="bi bi-calendar"></i><%= l diary.created_at, format: :short %></li>
-                    </ul>
                   </div>
                 </div>
               </div>
