@@ -1,0 +1,18 @@
+<ul class="list-inline">
+  <li><i class="bi bi-calendar"></i><%= l @diary.created_at, format: :long %></li>
+</ul>
+<div class="col-md-9">
+  <h3 style="display: inline;"><%= @diary.title %></h3>
+  <p><%= simple_format(@diary.body) %></p>
+  <div class='ms-auto flex space-x-2'>
+  <%= link_to '#', id: "button-edit-#{@diary.id}", class: 'bg-blue-500 text-white p-2 rounded hover:bg-blue-600' do %>
+    <i class="bi bi-pencil-fill"></i>編集
+  <% end %>
+  <%= link_to '#', id: "button-delete-#{@diary.id}", method: :delete, data: {confirm: ''}, class: 'bg-red-500 text-white p-2 rounded hover:bg-red-600' do %>
+    <i class="bi bi-trash-fill"></i>削除
+  <% end %>
+  <div class="button001">
+    <a href="<%= diaries_path %>">日記一覧へ</a>
+  </div>
+</div>
+</div>
