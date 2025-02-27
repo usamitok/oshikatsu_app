@@ -1,5 +1,4 @@
-@import 'top.tailwind.css';
-@import 'user_sessions.tailwind.css';
+@import "tailwindcss";
 
 @tailwind base;
 @tailwind components;
